@@ -1,0 +1,18 @@
+GET http://localhost:3333/teste
+
+###
+
+POST http://localhost:3333/trips
+content-type: application/json
+
+{
+  "destination": "Olinda",
+  "starts_at": "2024-80-12 T10:00:00",
+  "ends_at": "2024-12-12 T10:00:00",
+  "owner_name": "Rafa Albert",
+  "owner_email": "rafa.albert@gmail.com",
+  "emails_to_invite": [
+    "fulano@mail.com",
+    "ayachan@mail.com.jp"
+  ]
+}
