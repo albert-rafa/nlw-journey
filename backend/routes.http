@@ -2,17 +2,66 @@ GET http://localhost:3333/teste
 
 ###
 
+GET http://localhost:3333/db
+
+###
+
 POST http://localhost:3333/trips
-content-type: application/json
+Content-Type: application/json
 
 {
-  "destination": "Olinda",
-  "starts_at": "2024-80-12 T10:00:00",
-  "ends_at": "2024-12-12 T10:00:00",
+  "destination": "São Paulo",
+  "starts_at": "2024-08-12T10:00:00",
+  "ends_at": "2024-08-22T10:00:00",
   "owner_name": "Rafa Albert",
   "owner_email": "rafa.albert@gmail.com",
   "emails_to_invite": [
     "fulano@mail.com",
-    "ayachan@mail.com.jp"
+    "alice@gmail.com.br",
+    "dona.cassia@hotmail.com"
   ]
 }
+
+###
+
+GET http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021
+
+###
+
+GET http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021/confirm
+
+###
+
+GET http://localhost:3333/participants/d3a69a12-6dc0-4a81-b677-11698d703ae7/confirm
+
+###
+
+POST http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021/activities
+Content-Type: application/json
+
+{
+  "title": "Primeiro dia",
+  "occurs_at": "2024-08-12T22:30:00"
+}
+
+###
+
+GET http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021/activities
+
+###
+
+
+POST http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021/links
+Content-Type: application/json
+
+{
+  "title": "Reserva do AirBnB",
+  "url": "https://airbnb.com/reserva"
+}
+
+###
+
+GET http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021/links
+
+###
+
