@@ -4,6 +4,7 @@
 
 - ESLint
 - Prisma
+- REST Client
 
 ### Configurações
 
@@ -40,6 +41,7 @@
 - Configurar o banco de dados a ser usado
   `npx prisma init --datasource-provider SQLite`
 - Criação de tabelas
+
   ```prisma
     model TabelaNome {
       id String @id @default(uuid())
@@ -47,7 +49,9 @@
       @@map("nome_costumizado")
     }
   ```
+
   - No terminal: `npx prisma migrate dev`
+
 - Visualizar o banco de dados
   `npx prisma studio`
 - Transaction -> Forma de executar mais de uma ação no banco de dados e, se uma delas falhar, todas as que já executaram são desfeitas
@@ -91,4 +95,4 @@ app.withTypeProvider<ZodTypeProvider>().get(
 
 # Where did I stop?
 
-- Aula 2 - 35:48
+- Aula 3

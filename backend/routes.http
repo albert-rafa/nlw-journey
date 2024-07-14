@@ -55,13 +55,37 @@ POST http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021/links
 Content-Type: application/json
 
 {
-  "title": "Reserva do AirBnB",
-  "url": "https://airbnb.com/reserva"
+  "title": "Cartão de embarque",
+  "url": "https://azul.com.br/cartão-de-embarque/passageiro-1234"
 }
 
 ###
 
 GET http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021/links
+
+###
+
+GET http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021/participants 
+
+###
+
+POST http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021/invites 
+Content-Type: application/json
+
+{
+  "email": "henrique.arp@gmail.com"
+}
+
+###
+
+PUT http://localhost:3333/trips/0d6b3077-a3cf-4221-8c0a-86c1c1c57021
+Content-Type: application/json
+
+{
+  "destination": "São Paulo - BR",
+  "starts_at": "2024-08-12T10:00:00",
+  "ends_at": "2024-08-22T10:00:00"
+}
 
 ###
 
