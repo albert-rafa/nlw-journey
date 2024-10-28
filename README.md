@@ -7,9 +7,10 @@ Esta aplicação é focada no gerenciamento de viagens, permitindo organizar par
 As principais tecnologias usadas no projeto incluem:
 
 - __Node.js__ e __TypeScript__ - Linguagem e ambiente de execução
-- __Express__ - Framework para criação de APIs REST
+- __Fastify__ - Framework para criação de APIs REST
 - __Prisma__ - ORM para interações com o banco de dados SQLite
 - __Day.js__ - Biblioteca para manipulação de datas
+- __Zod__ - Biblioteca para validação e tipagem de dados
 - __Nodemailer__ - Envio de e-mails
 
 # 📁 Estrutura do Projeto
@@ -61,11 +62,20 @@ O backend estará disponível em `http://localhost:3000`.
 # 📌 Endpoints Disponíveis
 Aqui está uma visão geral dos principais endpoints:
 
-- `POST /create-trip` - Criação de nova viagem
-- `GET /get-trip-details` - Detalhes de uma viagem específica
-- `POST /create-activity` - Adicionar atividade a uma viagem
-- `GET /get-participants` - Listagem de participantes
-Nota: Detalhes completos sobre as rotas estão no arquivo routes.http.
+### Viagens
+- `POST /trips` - Cria uma nova viagem
+- `GET /trips` - Lista todas as viagens cadastradas
+- `GET /trips/:tripId` - Exibe detalhes de uma viagem específica
+
+### Participantes
+- `POST /trips/:tripId/participants` - Adiciona um novo participante à uma viagem
+- `GET /trips/:tripId/participants` - Lista os participantes de uma viagem
+
+### Atividades
+- `POST /trips/:tripId/activities` - Adiciona uma nova atividade à uma viagem
+- `GET /trips/:tripId/activities` - Lista as atividades de uma viagem
+
+Nota: Detalhes completos sobre as rotas estão no arquivo `routes.http`.
 
 # 📜 Licença
 Este projeto está licenciado sob a [licença MIT](LICENSE).
