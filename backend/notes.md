@@ -92,7 +92,3 @@ app.withTypeProvider<ZodTypeProvider>().get(
     origin: "*",
   });
   ```
-
-# Where did I stop?
-
-- Aula 3
